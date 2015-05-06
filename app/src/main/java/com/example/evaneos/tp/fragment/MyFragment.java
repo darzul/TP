@@ -23,6 +23,7 @@ public class MyFragment extends Fragment implements Data {
         mList = (RecyclerView) v.findViewById(R.id.list);
         mList.setLayoutManager(new LinearLayoutManager(getActivity()));
         mList.setAdapter(new MyAdapter(getActivity(), DATA));
+        mList.setHasFixedSize(true);
         return v;
     }
 }
