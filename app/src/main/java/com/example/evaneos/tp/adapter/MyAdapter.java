@@ -1,5 +1,6 @@
 package com.example.evaneos.tp.adapter;
 
+import android.content.Context;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.view.ViewGroup;
@@ -8,6 +9,14 @@ import android.view.ViewGroup;
  * Created by Evaneos on 06/05/2015.
  */
 public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
+
+    private Context context;
+    private final String [] data;
+
+    public MyAdapter(Context context, String[] data) {
+        this.context = context;
+        this.data = data;
+    }
 
     @Override
     public MyViewHolder onCreateViewHolder(ViewGroup viewGroup, int i) {

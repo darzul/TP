@@ -9,9 +9,11 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.example.evaneos.tp.Data;
 import com.example.evaneos.tp.R;
+import com.example.evaneos.tp.adapter.MyAdapter;
 
-public class MyFragment extends Fragment {
+public class MyFragment extends Fragment implements Data {
 
     RecyclerView mList;
 
@@ -20,6 +22,7 @@ public class MyFragment extends Fragment {
         View v = inflater.inflate(R.layout.fragment_layout, container, false);
         mList = (RecyclerView) v.findViewById(R.id.list);
         mList.setLayoutManager(new LinearLayoutManager(getActivity()));
+        mList.setAdapter(new MyAdapter(getActivity(), DATA));
         return v;
     }
 }
