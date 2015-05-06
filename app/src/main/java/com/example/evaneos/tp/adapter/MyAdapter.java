@@ -2,8 +2,11 @@ package com.example.evaneos.tp.adapter;
 
 import android.content.Context;
 import android.support.v7.widget.RecyclerView;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+
+import com.example.evaneos.tp.R;
 
 /**
  * Created by Evaneos on 06/05/2015.
@@ -20,7 +23,8 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
 
     @Override
     public MyViewHolder onCreateViewHolder(ViewGroup viewGroup, int i) {
-        return null;
+        View v = LayoutInflater.from(context).inflate(R.layout.item_layout, viewGroup, false);
+        return new MyViewHolder(v);
     }
 
     @Override
@@ -30,7 +34,7 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
 
     @Override
     public int getItemCount() {
-        return 0;
+        return data.length;
     }
 
     public static class MyViewHolder extends RecyclerView.ViewHolder {
